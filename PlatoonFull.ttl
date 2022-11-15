@@ -1,0 +1,122 @@
+@prefix : <https://w3id.org/platoon/EnergyMeasureOntology-1.3#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix plt: <https://w3id.org/platoon/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix void: <https://www.w3.org/TR/void/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <https://w3id.org/platoon/EnergyMeasureOntology-1.3> .
+
+<https://w3id.org/platoon/EnergyMeasureOntology-1.3> rdf:type owl:Ontology ;
+                                                      owl:versionIRI plt:platoon-1.2 ;
+                                                      owl:imports plt:AlignmentOntology-1.4 ,
+                                                                  plt:BuildingOntology-1.4 ,
+                                                                  plt:ElectricPowerSystemOntology-1.4 ,
+                                                                  plt:ElectricPowerTransformerOntology-1.5 ,
+                                                                  plt:EnergyMarketOntology-1.1 ,
+                                                                  <https://w3id.org/platoon/EnergyMeasureOntology-1.3> ,
+                                                                  plt:EventOntology-1.3 ,
+                                                                  plt:FailureAndDamageOntology-1.1 ,
+                                                                  plt:ForcastingOntology-1.1 ,
+                                                                  plt:GenericPropertyOntology-1.6 ,
+                                                                  plt:GridOntology-1.3 ,
+                                                                  plt:HVACOntology-1.5 ,
+                                                                  plt:KPIOntology-1.0 ,
+                                                                  plt:MeterOntology-1.1 ,
+                                                                  plt:ScheduleOntology-1.0 ,
+                                                                  plt:SensorOntology-1.2 ,
+                                                                  plt:StatusCodeAlarmOntology-1.3 ,
+                                                                  plt:StorageSystemOntology-1.2 ,
+                                                                  plt:WeatherOntology-1.6 ,
+                                                                  plt:WindTurbineOntology-1.3 ;
+                                                      dcterms:creator "Sarra BEN ABBES and Lynda TEMAL and Oumy SEYE" ;
+                                                      dcterms:description "The main Platoon ontology glues together all of the Platoon modules" ;
+                                                      dcterms:issued "2022-01-14"^^xsd:date ;
+                                                      dcterms:license <https://www.apache.org/licenses/LICENSE-2.0> ;
+                                                      dcterms:modified "2022-06-14"^^xsd:date ;
+                                                      dcterms:title "Platoon Ontology"@en ;
+                                                      vann:preferredNamespacePrefix "plt" ;
+                                                      vann:preferredNamespaceUri plt: ;
+                                                      owl:priorVersion plt:plt-1.1 ;
+                                                      owl:versionInfo "v1.2" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/contributor
+dcterms:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+dcterms:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+dcterms:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+dcterms:issued rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dcterms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+dcterms:modified rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dcterms:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
+vs:term_status rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://xmlns.com/foaf/0.1/name
+foaf:name rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/vocommons/voaf#Vocabulary
+voaf:Vocabulary rdf:type owl:Class .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+foaf:Person rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/platoon/
+plt: rdf:type owl:NamedIndividual ,
+              voaf:Vocabulary .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
